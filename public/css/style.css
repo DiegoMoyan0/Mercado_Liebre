@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
+
+/* ------------------------------- NAVBAR ------------------------------- */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Serif', serif;
+    background-color: #ebebeb;
+    width: 100vw;
+}
+
+/* ocultar el site */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #EAC926;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+}
+
+
+#nav-top-mobile {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.logo {
+    width: 100px;
+    margin: auto 1rem;
+    animation: aumentar 1s linear infinite alternate;
+}
+
+@keyframes aumentar {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.5);
+
+    }
+}
+
+.search-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: auto 1rem;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.search-container input {
+    padding: 0.25rem 0.5rem;
+    border: none;
+    font-size: 1.2rem;
+    width: 90%;
+}
+
+.search-container button {
+    background-color: white;
+    color: grey;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.copy-header {
+    text-align: center;
+    font-size: 1rem;
+}
+
+nav {
+    display: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222222;
+    display: inline-block;
+    padding: 5px 0;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.burger-menu {
+    background-color: #03264C;
+    color: white;
+    display: block;
+    padding: 5px 3px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    margin: 0 200px;
+    margin-top: 10px;
+}
+
+/* <!-- ------------------------------- BANNER ---------------------------------> */
+.img-banner {
+    width: 100%;
+}
+
+/* ------------------------------- INICIO ------------------------------- */
+
+main {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.titulares {
+    font-size: 24px;
+}
+
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+article {
+    flex-basis: 100%;
+    margin: 10px;
+    background-color: white;
+    position: relative;
+}
+
+article img {
+    width: 100%;
+    border-bottom: solid 1px #ebebeb;
+}
+
+
+article .description {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    margin: 0;
+    padding: 15px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 450ms;
+}
+
+article:hover .description {
+    opacity: 1;
+}
+
+.content-art {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+
+p {
+    font-size: 12px;
+}
+
+
+.price {
+    font-size: 18px;
+}
+
+.desc {
+    color: #39b54a;
+    font-size: 16px;
+
+}
+
+.description {
+    font-size: 16px;
+}
+
+.fa-truck {
+    color: #39b54a;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -20px;
+}
+.fa-truck:hover{
+    transition: 1s;
+    transform: rotate(-90deg);
+}
+
+article .price,
+.desc,
+.fa-truck {
+    display: none;
+}
+
+/* ------------------------------- FOOTER -------------------------------*/
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 1rem auto;
+}
+
+footer .fa-solid {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #1259c3;
+}
+.copy{
+    background-color: #0A1504;
+    margin: 0 auto;
+    padding: 1rem 0;
+    text-align: center;
+    color: white;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #0A1504;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0A1504;
+}
+
+
+/* ------------------------------- BREAK TABLET ------------------------------- */
+@media (min-width: 769px) {
+    .burger-menu {
+        display: none;
+    }
+
+    #nav-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav {
+        display: block;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav li {
+        margin: 0 5px;
+    }
+
+    article {
+        flex-basis: 40%;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .content-art {
+        display: block;
+    }
+
+    .desc {
+        margin-left: 5px;
+    }
+
+    .description {
+        width: 100%;
+    }
+
+    article .description {
+        position: static;
+        background-color: white;
+        color: black;
+        padding: 15px;
+    }
+
+    article .price,
+    .desc,
+    .fa-truck {
+        display: block;
+    }
+
+    .footer {
+        flex-direction: row;
+    }
+}
+
+/* ------------------------------- BREAK  DESKTOP------------------------------- */
+
+@media (min-width: 1200px) {
+    .product {
+        max-width: 100%;
+    }
+
+    article {
+        flex-basis: 20%;
+
+    }
+
+    .content-art {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* .copy-header{
+        max-width: 300px;
+        text-align: right;
+    } */
+
+
+    /* .content-art {
+        display: none;
+        text-align: left;
+        padding: 15px;
+        position: relative;
+    } */
+}
