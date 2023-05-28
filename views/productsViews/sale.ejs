@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head')%>
+        <link rel="stylesheet" href="/css/sale.css">
+    </head>
+
+<body>
+    <!--------------------------------- NAVBAR --------------------------------->
+    <%- include('../partials/header')%>
+    <!-- -------------------------------  --------------------------------->
+    <main>
+
+        <section id="sale">
+            <div id="container-sale">
+                <form action="/" method="POST">
+                    <h3 class="sale-titles">VENDER</h3>
+                    <div>
+                        <label class="form-label" for="foto">Foto del producto:</label>
+                        <input class="form-control" type="file" id="foto" name="foto" accept="image/*">
+                    </div>
+                    <div>
+                        <label for="InputName" class="form-label">Nombre del producto</label>
+                        <input type="text" class="form-control" id="InputName" placeholder="Ingrese Nombre..." minlength="4" maxlength="10"
+                            required />
+                    </div>
+                    <div>
+                        <label for="InputPrice" class="form-label">Precio</label>
+                        <input type="number" class="form-control" id="InputPrice" placeholder="Ingrese Precio..."
+                            required />
+                    </div>
+                    <div>
+                        <label for="InputDescription" class="form-label">Descripcion</label>
+                        <input type="textarea" class="form-control" id="InputDescription" placeholder="Ingrese Descripcion..." minlength="4" maxlength="10"
+                            required />
+                    </div>
+                    <div>
+                        <label class="form-label">Categoría:</label>
+                        <select name="categoria" id="" class="form-control">
+                            <option value="hogar">Hogar</option>
+                            <option value="electro">Electro</option>
+                            <option value="indumentaria">Indumentaria</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Ciudad:</label>
+                        <select name="Ciudad" id="" class="form-control">
+                            <option value="cba">Córdoba</option>
+                            <option value="bsas">Buenos Aires</option>
+                            <option value="ros">Rosario</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="form-label">Descuento</label><br><br>
+                        <label for="Vendedor">Si</label>
+                        <input type="radio" id="Vendedor" name="tipo-perfil" value="Vendedor">
+                        <label for="Comprador">No</label>
+                        <input type="radio" id="Comprador" name="tipo-perfil" value="Comprador">
+                    </div><br>
+                    <button type="submit" class="btn">
+                        Enviar
+                    </button><br>
+                    <button type="reset" class="btn">
+                        Borrar
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    <%- include('../partials/footer')%>
+</body>
+
+</html>
