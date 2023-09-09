@@ -9,8 +9,11 @@ const userRoutes = require('./routes/userRoutes');
 
 //resuelve y devuelve la ruta absoluta del directorio "public" en relación con el directorio actual (__dirname).//
 const publicPath = path.join(__dirname, "./public");
+
 //------Accedo a recursos estaticos (que no se renderizan: img, css, etc) -----//
 app.use(express.static(publicPath))
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
 
 // Configurar EJS como motor de plantillas
 app.set('view engine', 'ejs');

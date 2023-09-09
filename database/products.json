@@ -1,0 +1,11 @@
+[
+    {
+        "id": "12345",
+        "image": "https://ejemplo.com/imagen_camiseta.jpg",
+        "name": "Camiseta de algodón",
+        "price": 19.99,
+        "description": "Camiseta de manga corta hecha de suave algodón.",
+        "category": "Ropa",
+        "tipo-perfil": ""
+    }
+]

@@ -2,6 +2,20 @@
 <html lang="en">
 
 <body>
-    
+    <a href="/product/sale">crear producto</a>
+
+    <% productos.forEach(producto=> {%>
+        <article>
+            <h1>
+                <%= producto.name %>
+            </h1>
+            <p>
+                <%= producto.price %>
+            </p>
+            <br>
+        </article>
+        <%})%>
+
 </body>
+
 </html>
